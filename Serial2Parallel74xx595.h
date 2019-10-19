@@ -56,18 +56,18 @@ class Serial2Parallel74xx595
 public:
   // -- CONSTRUCTORS --
   Serial2Parallel74xx595 (int bits, int data, int clock, int latch, int clear);
-  ~Serial2Parallel74xx595 ();
-  
+  virtual ~Serial2Parallel74xx595() override;
+
   // -- ACCESSORS  --
-  
-  
+
+
   // -- MANIPULATORS --
   int Clear();
-  
-  
+
+
 protected:
-  
-  
+
+
 private:
   int m_clearPin;
 };

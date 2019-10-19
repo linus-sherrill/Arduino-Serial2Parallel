@@ -20,7 +20,6 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
- $Id:  $
 ----------------------------------------------------------- */
 
 
@@ -59,15 +58,15 @@ class Serial2Parallel
 public:
   // -- CONSTRUCTORS --
   Serial2Parallel(int bits, int data, int clock, int latch);
-  ~Serial2Parallel();
-  
+  virtual ~Serial2Parallel();
+
   // -- ACCESSORS  --
-  
-  
+
+
   // -- MANIPULATORS --
   void ShiftOut(char const* data_out);
 
-  
+
 protected:
   int m_dataPin;
   int m_clockPin;

@@ -42,19 +42,19 @@ public:
   // -- CONSTRUCTORS --
   Serial2ParallelOE (int bits, int data, int clock, int latch);
   Serial2ParallelOE (int bits, int data, int clock, int latch, int enable);
-  // ~Serial2ParallelOE () { }
-  
+  virtual ~Serial2ParallelOE() = default;
+
   // -- ACCESSORS  --
-  
-  
+
+
   // -- MANIPULATORS --
   void EnableOutput();
   void DisableOutput();
   void ShiftOutOC(char const* buffer);
-    
+
 protected:
-  
-  
+
+
 private:
   int m_enablePin;
 };
